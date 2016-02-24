@@ -31,3 +31,4 @@ RUN apt-get update && \
    apt-get clean
 
 ENV SHELL=/bin/bash
+ENV NO_MERCURIAL_SETUP_CHECK=1
