@@ -1,4 +1,4 @@
-FROM ubuntu:15.04
+FROM ubuntu:16.04
 MAINTAINER Makoto Kato <m_kato@ga2.so-net.ne.jp>
 
 ADD sources.list /etc/apt/
@@ -24,7 +24,6 @@ RUN apt-get update && \
   libgconf2-dev:arm64 \
   libpulse-dev:arm64 \
   libxt-dev:arm64 \
-  libgstreamer-plugins-base0.10-dev:arm64 \
   libgtk2.0-dev:arm64 \
   libgtk-3-dev:arm64 \
   mesa-common-dev:arm64 && \

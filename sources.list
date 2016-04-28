@@ -1,8 +1,8 @@
-deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ vivid main
-deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ vivid-updates main
-deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ vivid universe
-deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ vivid-updates universe
-deb [arch=armhf,arm64] http://ports.ubuntu.com/ vivid main
-deb [arch=armhf,arm64] http://ports.ubuntu.com/ vivid-updates main
-deb [arch=armhf,arm64] http://ports.ubuntu.com/ vivid universe
-deb [arch=armhf,arm64] http://ports.ubuntu.com/ vivid-updates  universe
+deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ xenial main
+deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ xenial-updates main
+deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ xenial universe
+deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ xenial-updates universe
+deb [arch=armhf,arm64] http://ports.ubuntu.com/ xenial main
+deb [arch=armhf,arm64] http://ports.ubuntu.com/ xenial-updates main
+deb [arch=armhf,arm64] http://ports.ubuntu.com/ xenial universe
+deb [arch=armhf,arm64] http://ports.ubuntu.com/ xenial-updates universe
