@@ -12,6 +12,7 @@ RUN apt-get update && \
   autoconf2.13 \
   build-essential \
   ccache \
+  curl \
   g++ \
   g++-aarch64-linux-gnu \
   mercurial \
@@ -29,5 +30,15 @@ RUN apt-get update && \
   mesa-common-dev:arm64 && \
    apt-get clean
 
+# Rust
+RUN curl https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init -o rustup-init
+RUN chmod +x rustup-init
+RUN ./rustup-init -y
+RUN rm ./rustup-init
+ENV PATH=$PATH:/root/.cargo/bin
+RUN $HOME/.cargo/bin/rustup target add aarch64-unknown-linux-gnu
+
+RUN adduser --ingroup users --disabled-password  --gecos '' builder
 ENV SHELL=/bin/bash
 ENV NO_MERCURIAL_SETUP_CHECK=1
+
