@@ -31,14 +31,13 @@ RUN apt-get update && \
   mesa-common-dev:arm64 && \
    apt-get clean
 
-# Rust
-RUN curl https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init -o rustup-init &&
-    chmod +x rustup-init &&
-    ./rustup-init -y &&
-    rm ./rustup-init
+RUN curl https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init -o rustup-init
+RUN chmod +x rustup-init
+RUN rustup-init -y
+RUN ./rustup-init
 ENV PATH=$PATH:/root/.cargo/bin
 RUN /root/.cargo/bin/rustup target add aarch64-unknown-linux-gnu
 
-RUN adduser --ingroup users --disabled-password  --gecos '' builder
+#RUN adduser --ingroup users --disabled-password  --gecos '' builder
 ENV SHELL=/bin/bash
 ENV NO_MERCURIAL_SETUP_CHECK=1
