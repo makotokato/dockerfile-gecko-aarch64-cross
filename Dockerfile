@@ -12,6 +12,7 @@ RUN apt-get update && \
   autoconf2.13 \
   build-essential \
   ccache \
+  clang-3.9 \
   curl \
   g++ \
   g++-aarch64-linux-gnu \
@@ -31,10 +32,10 @@ RUN apt-get update && \
   mesa-common-dev:arm64 && \
    apt-get clean
 
-RUN curl https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init -o rustup-init
-RUN chmod +x rustup-init
-RUN rustup-init -y
-RUN ./rustup-init
+RUN curl https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init -o rustup-init && \
+    chmod +x rustup-init && \
+    ./rustup-init -y && \
+    rm rustup-init
 ENV PATH=$PATH:/root/.cargo/bin
 RUN /root/.cargo/bin/rustup target add aarch64-unknown-linux-gnu
 
