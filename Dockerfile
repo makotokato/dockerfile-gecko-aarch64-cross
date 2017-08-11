@@ -15,6 +15,7 @@ RUN apt-get update && \
   curl \
   g++ \
   g++-aarch64-linux-gnu \
+  llvm-3.9 \
   mercurial \
   python \
   unzip \
