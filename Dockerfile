@@ -16,6 +16,7 @@ RUN apt-get update && \
   mesa-common-dev:arm64 && \
    apt-get clean
 
-RUN /root/.cargo/bin/rustup target add aarch64-unknown-linux-gnu
+RUN /root/.cargo/bin/rustup target add aarch64-unknown-linux-gnu && \
+    /root/.cargo/bin/rustup update
 
 #RUN adduser --ingroup users --disabled-password  --gecos '' builder
