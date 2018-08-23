@@ -1,0 +1,21 @@
+CROSS_COMPILE=1
+mk_add_options AUTOCLOBBER=1
+
+export PKG_CONFIG_PATH=/usr/lib/aarch64-linux-gnu/pkgconfig
+ac_add_options --target=aarch64-linux-gnu
+
+ac_add_options --enable-application=browser
+ac_add_options --with-ccache
+ac_add_options --disable-av1
+ac_add_options --disable-updater
+ac_add_options --disable-crashreporter
+
+# If using opt build
+ac_add_options --enable-optimize
+ac_add_options --enable-release
+
+export BINDGEN_CFLAGS="--target=aarch64-linux-gnu -I/usr/aarch64-linux-gnu/include/c++/7 -I/usr/aarch64-linux-gnu/include/c++/7/aarch64-linux-gnu -I/usr/lib/llvm-6.0/lib/clang/6.0.0/include"
+
+CC=aarch64-linux-gnu-gcc
+CXX=aarch64-linux-gnu-g++
+TOOLCHAIN_PREFIX=aarch64-linux-gnu-

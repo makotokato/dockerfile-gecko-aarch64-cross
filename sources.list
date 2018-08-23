@@ -1,8 +1,0 @@
-deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ bionic main
-deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ bionic-updates main
-deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ bionic universe
-deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ bionic-updates universe
-deb [arch=armhf,arm64] http://ports.ubuntu.com/ bionic main
-deb [arch=armhf,arm64] http://ports.ubuntu.com/ bionic-updates main
-deb [arch=armhf,arm64] http://ports.ubuntu.com/ bionic universe
-deb [arch=armhf,arm64] http://ports.ubuntu.com/ bionic-updates universe
